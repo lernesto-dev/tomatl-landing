@@ -1,48 +1,77 @@
-# Astro Starter Kit: Basics
+# Template
 
-```sh
-pnpm create astro@latest -- --template basics
+Proyecto 
+
+## Stack tecnologico
+
+| Herramientas | Versión  | Description            |
+| :----------- | :------- | :--------------------- |
+| `Node`       | `20.9.0` | Entorno de ejecución   |
+| `Java JDK`   | `11`     | Para emulador firebase |
+| `MySQL`      | `8.0.36` | Base de datos          |
+
+## Dependencias
+
+| Dependencias     | Versión  | Description                              |
+| :--------------- | :------- | :--------------------------------------- |
+| `express`        | `4.18.2` | Entorno de trabajo                       |
+| `zod`            | `3.22.4` | Validación de datos                      |
+
+## Estructura
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│    ├── config/
+│    ├── constants/
+│    ├── routers/
+│    ├── services/
+│    ├── utils/
+│    └── index.js
+├── tests/
+├── .env.dev
+├── .env.prod
+└── .env.template
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+> [!NOTE]
+> El archivo `.env.dev` contiene las credenciales de desarrollo
 
-## 🧞 Commands
+> [!NOTE]
+> El archivo `.env.prod` contiene las credenciales de producción
 
-All commands are run from the root of the project, from a terminal:
+## Comandos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Levantar el servicio en modo desarrollo
 
-## 👀 Want to learn more?
+```bash
+npm dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Compila los archivos
+
+```bash
+npm build
+```
+
+Ejecuta el proyecto compilado despues del comando `npm run build`
+
+```bash
+npm start
+```
+
+Ejecuta los test que se encuentran en la carpeta `test`
+
+```bash
+npm test
+```
+
+Ejecuta los test que se encuentran en la carpeta `test` y se queda a la escucha de cambios en las pruebas
+
+```bash
+npm test:watch
+```
+
+
+> [!NOTE]
+> Antes de correr algun comando ejecutar el comando `npm install` para instalar las dependencias
