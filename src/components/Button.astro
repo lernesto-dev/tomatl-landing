@@ -1,7 +1,7 @@
 ---
-const { text } = Astro.props;
+const { text, px } = Astro.props;
 ---
 
-<a class="py-[13px] px-[40px] bg-primary rounded-full text-white font-medium cursor-pointer" href="#">
+<a class={`py-[13px] ${px ? px : 'px-[40px]'} bg-primary rounded-full text-white font-medium cursor-pointer`} href="#">
   {text}
 </a>

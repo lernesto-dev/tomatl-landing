@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/noto-sans-kannada':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/mochiy-pop-one':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tailwindcss/vite':
         specifier: 4.0.10
         version: 4.0.10(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.1))
@@ -15,7 +21,7 @@ importers:
         specifier: 5.4.2
         version: 5.4.2(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(typescript@5.8.2)
       astro-icon:
-        specifier: ^1.1.5
+        specifier: 1.1.5
         version: 1.1.5
       tailwindcss:
         specifier: 4.0.10
@@ -215,6 +221,12 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/noto-sans-kannada@5.2.5':
+    resolution: {integrity: sha512-7MnvzZSSo/4mm1rnmqZHxZYNLlG8XzeW1L+tJFMHU4fW/aEils5UfSM84cjmlhHns7IF57t0D6dDTaX6onr+WQ==}
+
+  '@fontsource/mochiy-pop-one@5.2.5':
+    resolution: {integrity: sha512-ch6o2n771IyTatPa6nqbUXk584DvYXuKuKcdh63QDj26CwqJPghidZVj+8+UPaPYkRbTLyKmrKx9ktjDtupg/Q==}
 
   '@iconify/tools@4.1.1':
     resolution: {integrity: sha512-Hybu/HGhv6T8nLQhiG9rKx+ekF7NNpPOEQAy7JRSKht3s3dcFSsPccYzk24Znc9MTxrR6Gak3cg6CPP5dyvS2Q==}
@@ -2094,6 +2106,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.0':
     optional: true
+
+  '@fontsource-variable/noto-sans-kannada@5.2.5': {}
+
+  '@fontsource/mochiy-pop-one@5.2.5': {}
 
   '@iconify/tools@4.1.1':
     dependencies:
