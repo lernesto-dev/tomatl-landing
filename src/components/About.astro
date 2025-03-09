@@ -1,0 +1,36 @@
+---
+import ItemAbout from "./ItemAbout.astro";
+---
+
+<section>
+  <div
+    class="flex py-[100px] w-max-[1440px] mx-auto flex-col items-center gap-y-[40px]"
+  >
+    <h2 class="text-3xl text-wrap font-not-sk font-bold text-center">
+      ¿Qué es la Técnica Pomodoro?
+    </h2>
+    <p class="text-noto-sk text-xl text-gray-text">
+      Un método efectivo para mejorar tu concentración y productividad
+    </p>
+    <div>
+      <div>
+        <ItemAbout
+          iconName="timer"
+          title="Trabaja con intervalos enfocados"
+          description='Divide tu trabajo en intervalos de 25 minutos, llamados "Pomodoros", seguidos de breves descansos de 5 minutos.'
+        />
+        <ItemAbout
+          iconName="coffee"
+          title="Toma descansos regulares"
+          description="Después de completar 4 Pomodoros, toma un descanso más largo de 15-30 minutos para rejuvenecer tu mente."
+        />
+        <ItemAbout
+          iconName="check"
+          title="Gestiona distracciones"
+          description="Aprende a identificar distracciones y aplazarlas hasta tu próximo descanso, mejorando tu concentración."
+        />
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>

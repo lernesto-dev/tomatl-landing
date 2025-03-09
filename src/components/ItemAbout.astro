@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { iconName, title, description } = Astro.props;
+---
+
+<div class="flex items-center justify-between gap-x-[10px]">
+  <div class="p-[10px] rounded-full bg-[#004aaa25]">
+    <Icon name={iconName} width="24" height="24" />
+  </div>
+  <div class="flex flex-col gap-y-[10px] w-[500px]">
+    <p class="text-noto-sk text-black text-xl font-bold">
+      {title}
+    </p>
+    <p class="text-noto-sk text-gray-text text-wrap">
+      {description}
+    </p>
+  </div>
+</div>
