@@ -1,0 +1,29 @@
+---
+import Button from "./Button.astro";
+import ButtonOutline from "./ButtonOutline.astro";
+
+const { type, price, features, textButton } = Astro.props;
+---
+
+<div
+  class="flex flex-col py-[40px] px-[30px] border border-gray-light rounded-lg gap-y-[10px] w-[375px]"
+>
+  <p class="text-noto-sk text-2xl font-medium">{type}</p>
+  <p class="text-noto-sk text-3xl font-bold">{price}</p>
+  <div class="flex flex-col gap-y-[20px] my-[40px]">
+    {
+      features.map((feature: string) => (
+        <p class="text-noto-sk text-xl text-gray-text">
+          <span class="font-bold text-primary px-[10px]">✓</span> {feature}
+        </p>
+      ))
+    }
+  </div>
+  {
+    type === "Pro" ? (
+      <Button text={textButton} />
+    ) : (
+      <ButtonOutline text={textButton} />
+    )
+  }
+</div>

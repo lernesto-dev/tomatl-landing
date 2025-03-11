@@ -1,0 +1,38 @@
+---
+import Plan from "./Plan.astro";
+---
+
+<section>
+  <div
+    class="flex py-[100px] w-max-[1440px] mx-auto flex-col items-center gap-y-[40px]"
+  >
+    <h2 class="text-3xl text-wrap font-not-sk font-bold text-center">
+      Planes simples y transparentes
+    </h2>
+    <p class="text-noto-sk text-xl text-gray-text">
+      Elige el plan que mejor se adapte a tus necesidades.
+    </p>
+    <div class="flex flex-row gap-x-[100px]">
+      <Plan
+        type="Básico"
+        price="Gratis"
+        features={[
+          "Timer Pomodoro básico",
+          "Gestión de tareas simple",
+          "Estadísticas diarias",
+        ]}
+        textButton="Comenzar gratis"
+      />
+      <Plan
+        type="Pro"
+        price="$20 MXN/MES"
+        features={[
+          "Timer personalizable",
+          "Estadísticas detalladas",
+          "Reportes de productividad",
+        ]}
+        textButton="Obtener Pro"
+      />
+    </div>
+  </div>
+</section>
