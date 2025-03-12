@@ -4,12 +4,22 @@ import { Icon } from "astro-icon/components";
 const year = new Date().getFullYear();
 ---
 
-
 <footer class="">
-    <div
-      class="flex justify-between p-[20px] border-t-2 border-gray-200 w-max-[1440px] mx-auto"
-    >
-      <Icon name="logo" width="106" height="52" />
-      <p class="my-auto text-gray-text">© {year} Tomatl. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <div
+    class="flex justify-between p-[20px] border-t-2 border-gray-200 w-max-[1440px] mx-auto"
+  >
+    <Icon class="logo" name="logo" width="106" height="52" />
+    <p class="my-auto text-gray-text">
+      © {year} Tomatl. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<style>
+  body.darkTheme footer {
+    background-color: #000000;
+  }
+  body.darkTheme footer .logo {
+    filter: invert(1);
+  }
+</style>

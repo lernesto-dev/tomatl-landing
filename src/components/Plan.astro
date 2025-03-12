@@ -6,7 +6,7 @@ const { type, price, features, textButton } = Astro.props;
 ---
 
 <div
-  class="flex flex-col py-[40px] px-[30px] border border-gray-light rounded-lg gap-y-[10px] w-[375px]"
+  class="flex flex-col py-[40px] px-[30px] border border-gray-light rounded-lg gap-y-[10px] w-[375px] card"
 >
   <p class="text-noto-sk text-2xl font-medium">{type}</p>
   <p class="text-noto-sk text-3xl font-bold">{price}</p>
@@ -27,3 +27,9 @@ const { type, price, features, textButton } = Astro.props;
     )
   }
 </div>
+
+<style>
+  body.darkTheme .card > p {
+    color: #ffffff;
+  }
+</style>
