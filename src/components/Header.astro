@@ -1,13 +1,26 @@
 ---
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
+import ButtonMode from "./ButtonMode.astro";
 ---
 
-<header class="">
+<header>
   <div
     class="flex justify-between p-[20px] border-b-2 border-gray-200 w-max-[1440px] mx-auto"
   >
-    <Icon name="logo" width="106" height="52" />
-    <Button text="Iniciar Sesión" />
+    <Icon class="logo" name="logo" width="106" height="52" />
+    <div class="flex gap-[20px] items-center">
+      <ButtonMode />
+      <Button text="Iniciar Sesión" />
+    </div>
   </div>
 </header>
+
+<style>
+  body.darkTheme header {
+    background-color: #000000;
+  }
+  body.darkTheme header .logo {
+    filter: invert(1);
+  }
+</style>
