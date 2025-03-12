@@ -68,7 +68,7 @@
   const input = document.querySelector("#input") as HTMLInputElement;
   input?.addEventListener("change", (event: any) => {
     if (event.target.checked) {
-      document.body.classList.add("darkTheme");
+      document.body.classList.add("darkTheme", "bg-dark");
     } else {
       document.body.classList.remove("darkTheme");
     }

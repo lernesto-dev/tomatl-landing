@@ -5,7 +5,7 @@ const { iconName, title, description } = Astro.props;
 ---
 
 <div
-  class="flex flex-col items-start gap-y-[15px] p-[20px] bg-white rounded-lg"
+  class="flex flex-col items-start gap-y-[15px] p-[20px] bg-white rounded-lg border border-gray-light"
 >
   <Icon name={iconName} width="44" height="44" />
   <p class="text-noto-sk text-black text-xl font-bold">{title}</p>
@@ -13,3 +13,11 @@ const { iconName, title, description } = Astro.props;
     {description}
   </p>
 </div>
+<style>
+  body.darkTheme div {
+    background-color: #000000;
+  }
+  body.darkTheme div p:first-of-type {
+    color: #ffffff;
+  }
+</style>
