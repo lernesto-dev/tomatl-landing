@@ -3,8 +3,16 @@ const { text, px } = Astro.props;
 ---
 
 <a
-  class={`py-[13px] ${px ? px : "px-[40px]"} bg-primary rounded-full text-white font-medium cursor-pointer text-center`}
+  class={`py-[13px] ${px ? px : "px-[40px]"} bg-primary rounded-full text-white font-medium cursor-pointer text-center btn`}
   href="#"
 >
   {text}
 </a>
+<style>
+  @media (max-width: 408px) {
+    .btn {
+      padding: 10px 15px !important;
+      font-size: 14px !important;
+    }
+  }
+</style>
