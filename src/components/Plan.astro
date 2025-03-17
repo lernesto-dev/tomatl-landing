@@ -2,7 +2,7 @@
 import Button from "./Button.astro";
 import ButtonOutline from "./ButtonOutline.astro";
 
-const { type, price, features, textButton } = Astro.props;
+const { type, price, features, textButton, href } = Astro.props;
 ---
 
 <div
@@ -21,9 +21,9 @@ const { type, price, features, textButton } = Astro.props;
   </div>
   {
     type === "Pro" ? (
-      <Button text={textButton} />
+      <Button text={textButton} href={href} />
     ) : (
-      <ButtonOutline text={textButton} />
+      <ButtonOutline text={textButton} href={href} />
     )
   }
 </div>

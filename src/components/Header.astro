@@ -2,6 +2,8 @@
 import { Icon } from "astro-icon/components";
 import Button from "./Button.astro";
 import ButtonMode from "./ButtonMode.astro";
+
+const { showBtnLogin } = Astro.props;
 ---
 
 <header>
@@ -11,7 +13,11 @@ import ButtonMode from "./ButtonMode.astro";
     <Icon class="logo" name="logo" width="106" height="52" />
     <div class="flex gap-[20px] items-center">
       <ButtonMode />
-      <Button text="Iniciar Sesión" />
+      {
+        showBtnLogin === undefined || showBtnLogin === true ? (
+          <Button text="Iniciar Sesión" href="/temporary" />
+        ) : null
+      }
     </div>
   </div>
 </header>

@@ -1,10 +1,10 @@
 ---
-const { text, px } = Astro.props;
+const { text, px, href } = Astro.props;
 ---
 
 <a
   class={`py-[13px] ${px ? px : "px-[40px]"} bg-primary rounded-full text-white font-medium cursor-pointer text-center btn`}
-  href="#"
+  href={href}
 >
   {text}
 </a>

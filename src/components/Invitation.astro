@@ -18,11 +18,25 @@ import ButtonOutline from "./ButtonOutline.astro";
       ahora.
     </p>
     <div class="flex flex-row gap-[40px]">
-      <Button text="Comenzar gratis" px="px-[70px]" />
-      <ButtonOutline text="Ver planes" px="px-[70px]" />
+      <Button text="Comenzar gratis" px="px-[70px]" href="/temporary" />
+      <ButtonOutline
+        text="Ver planes"
+        px="px-[70px]"
+        id="btn-go-plans"
+        href="#plans"
+      />
     </div>
   </div>
 </section>
+
+<script>
+  const btn = document.querySelector("#btn-go-plans") as HTMLElement;
+  btn.addEventListener("click", (event: any) => {
+    event.preventDefault();
+    const section = document.querySelector("#plans") as HTMLElement;
+    section.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
 
 <style>
   body.darkTheme section {
