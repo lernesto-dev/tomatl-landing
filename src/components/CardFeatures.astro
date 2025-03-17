@@ -5,7 +5,7 @@ const { iconName, title, description } = Astro.props;
 ---
 
 <div
-  class="flex flex-col items-start gap-y-[15px] p-[20px] bg-white rounded-lg border border-gray-light"
+  class="flex flex-col items-start gap-y-[15px] p-[20px] bg-white rounded-lg border border-gray-light card"
 >
   <Icon name={iconName} width="44" height="44" />
   <p class="text-noto-sk text-black text-xl font-bold">{title}</p>
@@ -38,5 +38,11 @@ const { iconName, title, description } = Astro.props;
     div p {
       max-width: 250px;
     }
+  }
+  .card {
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.15);
   }
 </style>
