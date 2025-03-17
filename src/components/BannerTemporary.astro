@@ -1,0 +1,58 @@
+---
+import Button from "./Button.astro";
+---
+
+<section>
+  <div
+    class="flex py-[100px] w-max-[1440px] mx-auto flex-col items-center gap-y-[40px]"
+  >
+    <h1 class="text-5xl/20 text-wrap font-special w-[1000px] text-center">
+      Plataforma en
+      <span class="text-primary">Desarrollo</span>
+    </h1>
+    <p class="text-noto-sk text-xl text-gray-text">
+      Estamos trabajando arduamente para ofrecerte la mejor experiencia de
+      productividad. La plataforma estará disponible próximamente.
+    </p>
+    <p class="text-noto-sk text-xl text-gray-text">
+      <span class="font-bold text-primary px-[10px]">✓</span>
+      Timer Pomodoro personalizable
+    </p><p class="text-noto-sk text-xl text-gray-text">
+      <span class="font-bold text-primary px-[10px]">✓</span>
+      Gestión avanzada de tareas
+    </p><p class="text-noto-sk text-xl text-gray-text">
+      <span class="font-bold text-primary px-[10px]">✓</span>
+      Estadísticas detalladas
+    </p>
+    <Button text="Volver al inicio" px="px-[70px]" href="/" />
+  </div>
+</section>
+<style>
+  body.darkTheme section {
+    background-color: #000000;
+  }
+  body.darkTheme h1 {
+    color: #ffffff;
+  }
+  body.darkTheme p {
+    color: var(--color-gray-light);
+  }
+  @media (max-width: 1228px) {
+    section > div {
+      width: 90%;
+    }
+    h1 {
+      width: 600px;
+      font-size: 30px;
+      line-height: 40px;
+      max-width: 95%;
+    }
+    p {
+      width: 650px;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      max-width: 95%;
+    }
+  }
+</style>
