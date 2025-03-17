@@ -28,4 +28,9 @@ const { iconName, title, description } = Astro.props;
   body.darkTheme div div:first-of-type {
     background-color: #ffffff25;
   }
+  @media (max-width: 1228px) {
+    div > div:nth-child(2) {
+      width: 90%;
+    }
+  }
 </style>

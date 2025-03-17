@@ -22,4 +22,12 @@ const year = new Date().getFullYear();
   body.darkTheme footer .logo {
     filter: invert(1);
   }
+  @media (max-width: 768px) {
+    footer > div {
+      flex-direction: column;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 </style>

@@ -23,4 +23,15 @@ const { iconName, title, description } = Astro.props;
   body.darkTheme div p:first-of-type {
     color: #ffffff;
   }
+
+  @media (max-width: 1228px) {
+    div p {
+      max-width: 250px;
+    }
+  }
+  @media (max-width: 1024px) {
+    div p {
+      max-width: 322px;
+    }
+  }
 </style>

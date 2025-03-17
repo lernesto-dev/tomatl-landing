@@ -47,4 +47,24 @@ import Plan from "./Plan.astro";
   body.darkTheme h2 {
     color: #ffffff;
   }
+  @media (max-width: 1024px) {
+    section > div {
+      width: 90%;
+    }
+    section > div > div {
+      gap: 50px;
+    }
+    section > div > h2 {
+      max-width: 95%;
+    }
+    section > div > p {
+      max-width: 95%;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    section > div > div {
+      flex-direction: column;
+    }
+  }
 </style>

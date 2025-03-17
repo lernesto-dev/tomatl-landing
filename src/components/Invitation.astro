@@ -17,7 +17,7 @@ import ButtonOutline from "./ButtonOutline.astro";
       con PomodoroApp. Tu viaje hacia una mejor gestión del tiempo comienza
       ahora.
     </p>
-    <div class="flex flex-row gap-x-[40px]">
+    <div class="flex flex-row gap-[40px]">
       <Button text="Comenzar gratis" px="px-[70px]" />
       <ButtonOutline text="Ver planes" px="px-[70px]" />
     </div>
@@ -33,5 +33,15 @@ import ButtonOutline from "./ButtonOutline.astro";
   }
   body.darkTheme h2 {
     color: #ffffff;
+  }
+  @media (max-width: 1024px) {
+    section > div {
+      width: 90%;
+    }
+  }
+  @media (max-width: 768px) {
+    section > div > div {
+      flex-direction: column;
+    }
   }
 </style>
